@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
+
+:root {
+    --darkpurple: #9D90DE;
+    --ligthpurple: #CAA3FA;
+    --primaria: #ACB3F5;
+    --darkblue: #90ACDE;
+    --ligthblue: #A3DAFA;
+    --branco: #FFF;
+    --gray: rgb(182, 182, 182);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+}
+
+a {
+    text-decoration: none;
+    color: var(--darkblue);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--branco);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--darkpurple);
+}
+
+header h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.card-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15px;
+    width: 25vw;
+    padding: 15px;
+
+}
+
+.input-login {
+    height: 30px;
+    border: var(--primaria) 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.card-divider {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--gray);
+}
+
+.card-row {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primaria);
+    color: var(--branco);
+    font-weight: bolder;
+}
+
+.btn-darkpurple {
+    background-color: var(--darkpurple);
+    font-weight: bolder;
+    color: var(--branco);
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+}
