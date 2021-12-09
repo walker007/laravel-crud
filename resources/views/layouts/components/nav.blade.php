@@ -1,5 +1,7 @@
 <nav>
     <ul>
+
+        <li><a href="{{ route('marcas.index') }}">Marcas</a></li>
         <li><a href="#!logout" onclick="document.getElementById('logoutForm').submit()">Sair</a></li>
     </ul>
 </nav>

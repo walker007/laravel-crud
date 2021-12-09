@@ -40,5 +40,14 @@ Route::middleware(['guest'])->name('password.')->prefix('password')->group(funct
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/home',"DashboardController@index")->name('dashboard');
+    Route::get('/',"DashboardController@index")->name('dashboard');
+
+    Route::prefix('marcas')->name('marcas.')->group(function () {
+        Route::get('/',"MarcaController@index")->name('index');
+        Route::get("/cadastro", "MarcaController@create")->name('create');
+        Route::post("/cadastro/salvar", "MarcaController@store")->name('store');
+        Route::get('/{marca_id}/editar', "MarcaController@edit")->name('editar');
+        Route::put('/{marca_id}/update', "MarcaController@update")->name('update');
+        Route::delete('/{marca_id}/delete',"MarcaController@delete")->name('delete');
+    });
 });
