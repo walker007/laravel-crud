@@ -9,6 +9,11 @@ class DashboardController extends Controller
 {
     public function index(): View
     {
+        return view('dashboard.index');
+    }
 
+    public function emailNotice(): View
+    {
+        return view('auth.verifique');
     }
 }

@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') | {{ $_ENV['APP_NAME'] }}</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     @stack("styles")
 </head>
 
 <body>
     <header>
-        <h1>{{ $_ENV['APP_NAME'] }}</h1>
-        <h2>@yield('title-page')</h2>
+        @include('layouts.components.nav')
+
     </header>
     <main>
         @yield('content')

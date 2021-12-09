@@ -5,14 +5,24 @@
 @section('content')
     <div class="card-login">
         {!! Form::open(['route' => 'login', 'method' => 'POST']) !!}
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" class="input-login">
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" class="input-login">
+        @error('email')
+            <div class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </div>
+        @enderror
+        {{ Form::label('email', 'Email') }}
+        {{ Form::email('email', null, ['class' => 'input-login']) }}
+        @error('password')
+            <div class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </div>
+        @enderror
+        {{ Form::label('password', 'Senha') }}
+        {{ Form::password('password', ['class' => 'input-login']) }}
         <div class="card-row">
 
             <button class="btn btn-primary" type="submit">Acessar</button>
-            <a href="">Esqueceu sua senha?</a>
+            <a href="{{ route('password.request') }}">Esqueceu sua senha?</a>
         </div>
         {!! Form::close() !!}
         <span class="card-divider">
@@ -25,5 +35,10 @@
             </a>
 
         </div>
+        @if (session('status'))
+            <div class="message msg-success">
+                {{ session('status') }}
+            </div>
+        @endif
     </div>
 @endsection

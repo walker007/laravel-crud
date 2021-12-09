@@ -8,6 +8,7 @@
     --ligthblue: #A3DAFA;
     --branco: #FFF;
     --gray: rgb(182, 182, 182);
+    --error: #F00;
 }
 
 
@@ -57,7 +58,12 @@ header h2 {
     margin-top: 15px;
     width: 25vw;
     padding: 15px;
+}
 
+.card-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .input-login {
@@ -73,6 +79,7 @@ header h2 {
     padding-top: 20px;
     padding-bottom: 20px;
     color: var(--gray);
+    letter-spacing: 2px;
 }
 
 .card-row {
@@ -103,4 +110,20 @@ header h2 {
 .btn-block {
     width: 100%;
     text-align: center;
+}
+
+.invalid-feedback {
+    color: var(--error);
+    width: 100%;
+    font-size: 12px;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.msg-success {
+    color: #12cc00;
 }
