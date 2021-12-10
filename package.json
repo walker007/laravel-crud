@@ -14,5 +14,10 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "v-mask": "^2.3.0",
+        "v-money": "^0.8.1",
+        "vue": "^2.6.14"
     }
 }

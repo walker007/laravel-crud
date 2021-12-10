@@ -11,7 +11,7 @@
         </div>
         <div class="card-row">
 
-            <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+            <button class="btn btn-primary btn-block" type="submit">Salvar</button>
 
         </div>
     </div>

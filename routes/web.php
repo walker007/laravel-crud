@@ -50,4 +50,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::put('/{marca_id}/update', "MarcaController@update")->name('update');
         Route::delete('/{marca_id}/delete',"MarcaController@delete")->name('delete');
     });
+
+    Route::prefix('produtos')->name('produtos.')->group(function () {
+        Route::get('/',"ProdutoController@index")->name('index');
+        Route::get("/cadastro", "ProdutoController@create")->name('create');
+        Route::post("/cadastro/salvar", "ProdutoController@store")->name('store');
+        Route::get('/{produto_id}/editar', "ProdutoController@edit")->name('editar');
+        Route::put('/{produto_id}/update', "ProdutoController@update")->name('update');
+        Route::delete('/{produto_id}/delete',"ProdutoController@delete")->name('delete');
+    });
 });

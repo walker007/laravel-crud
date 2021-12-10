@@ -52,7 +52,7 @@ class RegisterController extends Controller
 
     private function getUserData(RegisterRequest $request): array
     {
-        $data = $request->all();
+        $data = $request->only('email','name','password');
         $data['password'] = Hash::make($data['password']);
 
         return $data;

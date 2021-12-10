@@ -13,6 +13,7 @@
                     <thead>
                         <tr>
                             <td>Marca</td>
+                            <td>Produtos</td>
                             <td class="text-right">Ações</td>
                         </tr>
                     </thead>
@@ -20,6 +21,7 @@
                         @foreach ($marcas as $marca)
                             <tr>
                                 <td>{{ $marca->nome }}</td>
+                                <td>{{ $marca->produtos->count() }}</td>
                                 <td class="text-right">
                                     {{ Form::open(['route' => ['marcas.delete', 'marca_id' => $marca->id], 'id' => 'delete_' . $marca->id, 'method' => 'delete']) }}
                                     {{ Form::close() }}<a href="#!apagar"

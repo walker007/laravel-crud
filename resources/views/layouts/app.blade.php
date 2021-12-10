@@ -11,22 +11,24 @@
 </head>
 
 <body>
-    <header>
-        @include('layouts.components.nav')
-        <h1>@yield('title')</h1>
-    </header>
-    <main>
-        <div class="container">
-            <div class="container-row">
-                @if (session('message'))
-                    <div class="msg msg-info">
-                        <p>{{ session('message') }}</p>
-                    </div>
-                @endif
+    <div id="app">
+        <header>
+            @include('layouts.components.nav')
+            <h1>@yield('title')</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="container-row">
+                    @if (session('message'))
+                        <div class="msg msg-info">
+                            <p>{{ session('message') }}</p>
+                        </div>
+                    @endif
+                </div>
             </div>
-        </div>
-        @yield('content')
-    </main>
+            @yield('content')
+        </main>
+    </div>
     <script src="{{ asset('js/index.js') }}"></script>
     @method('scripts')
 </body>
