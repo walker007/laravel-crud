@@ -1,7 +1,8 @@
 import Vue from 'vue/dist/vue.js';
-import VueMask from 'v-mask'
 import money from 'v-money'
+import VueTheMask from 'vue-the-mask'
 
+Vue.use(VueTheMask)
 Vue.use(money);
 
 var app = new Vue({

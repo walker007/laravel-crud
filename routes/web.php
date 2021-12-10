@@ -59,4 +59,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::put('/{produto_id}/update', "ProdutoController@update")->name('update');
         Route::delete('/{produto_id}/delete',"ProdutoController@delete")->name('delete');
     });
+
+    Route::prefix('fornecedores')->name('fornecedores.')->group(function () {
+        Route::get('/',"FornecedorController@index")->name('index');
+        Route::get("/cadastro", "FornecedorController@create")->name('create');
+        Route::post("/cadastro/salvar", "FornecedorController@store")->name('store');
+        Route::get('/{fornecedor_id}/editar', "FornecedorController@edit")->name('editar');
+        Route::put('/{fornecedor_id}/update', "FornecedorController@update")->name('update');
+        Route::delete('/{fornecedor_id}/delete',"FornecedorController@delete")->name('delete');
+    });
 });
